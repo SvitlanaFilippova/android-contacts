@@ -3,6 +3,7 @@ package ru.yandex.practicum.contacts.presentation.sort;
 import androidx.annotation.NonNull;
 
 import ru.yandex.practicum.contacts.presentation.base.ListDiffInterface;
+import ru.yandex.practicum.contacts.presentation.filter.model.FilterContactTypeUi;
 import ru.yandex.practicum.contacts.presentation.main.ContactUi;
 import ru.yandex.practicum.contacts.presentation.sort.model.SortType;
 
@@ -25,8 +26,8 @@ public class SortTypeUI implements ListDiffInterface<SortTypeUI> {
     }
     @Override
     public boolean theSameAs(@NonNull SortTypeUI t)
-    {
-        return this.getSortType() == t.getSortType();
+    {  SortTypeUI oldItem = this;
+        return oldItem.getSortType() == t.getSortType();
     }
 
     @Override
